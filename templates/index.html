@@ -3,22 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Recipes Website</title>
+    <title>My Recipe Website</title>
+    <link rel="stylesheet" href="/static/css/main.css">
+    
 </head>
 <body>
-    <!-- Your content goes here -->
-    <h1>Welcome to My Website</h1>
-    <p>This is a basic HTML page.</p>
 
-    <div class="navbar">
+    <header id="main-header">
+        <h1>My Recipes</h1>
+    </header>
+
+    <nav>
         <ul>
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="./browse.html">Browse</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="browse.html">Recipes</a></li>
         </ul>
-    </div>
+    </nav>
+
+    <main class="container">
+        <h2>Welcome to Recipes Web App</h2>
+        <p>This is the homepage for our recipe collection. Use the navigation above to browse all our delicious recipes.</p>
+        
+        <h3>Featured Recipe</h3>
+        <div class="recipe-card">
+            <img src="https://via.placeholder.com/400x200.png?text=Yummy+Food" alt="Placeholder image of food">
+            <h3>Classic Chocolate Cake</h3>
+            <p>A timeless, rich, and moist chocolate cake for all occasions.</p>
+            <a href="recipe_detail.html">View Recipe</a>
+        </div>
+    </main>
+
+    <footer id="page-footer">
+        <p>&copy; a footer</p>
+    </footer>
 
 </body>
 </html>
-
-
-

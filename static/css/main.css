@@ -1,0 +1,126 @@
+:root {
+  --primary-color: #e9bdda;
+  --secondary-color: #333;
+  --light-gray: #f4f4f4;
+  --white: #ffffff;
+  --base-font: 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Element Selector: body */
+body {
+  font-family: var(--base-font);
+  margin: 0;
+  background-color: var(--light-gray);
+  color: var(--secondary-color);
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: 'Georgia', serif;
+  color: var(--primary-color);
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+p {
+  font-size: 1em;
+  margin-bottom: 1em;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline; 
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: var(--white);
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* ID Selector: #main-header */
+#main-header {
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 1rem 0;
+  text-align: center;
+}
+
+#main-header h1 {
+  color: var(--white);
+  margin: 0;
+}
+
+/* Element Selector: nav (navigation) */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+  background: var(--secondary-color);
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  display: block;
+  padding: 15px 20px;
+  color: var(--white);
+}
+
+nav ul li a:hover {
+  background: var(--primary-color);
+  text-decoration: none;
+}
+
+/* Class Selector: .recipe-card (for browse.html) */
+.recipe-card {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  padding: 15px;
+  background: var(--white);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.recipe-card:hover {
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.recipe-card img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+
+/* Class Selector: .recipe-detail-image (for recipe_detail.html) */
+.recipe-detail-image {
+    max-width: 50%;
+    display: block;
+    margin: 0 auto 20px auto;
+    border-radius: 8px;
+}
+
+/* ID Selector: #page-footer */
+#page-footer {
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px;
+  font-size: 0.9em;
+  color: #777;
+}
