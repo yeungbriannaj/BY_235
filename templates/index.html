@@ -1,41 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Recipe Website</title>
-    <link rel="stylesheet" href="/static/css/main.css">
-    
-</head>
-<body>
-
+    <link rel="stylesheet" href="/static/css/main.css" />
+  </head>
+  <body>
     <header id="main-header">
-        <h1>My Recipes</h1>
+      <h1>My Recipes</h1>
     </header>
 
     <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="browse.html">Recipes</a></li>
-        </ul>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="browse.html">Recipes</a></li>
+      </ul>
     </nav>
 
     <main class="container">
-        <h2>Welcome to Recipes Web App</h2>
-        <p>This is the homepage for our recipe collection. Use the navigation above to browse all our delicious recipes.</p>
-        
-        <h3>Featured Recipe</h3>
+      <h2>Welcome to Recipes Web App</h2>
+      <p>
+        This is the homepage for our recipe collection. Use the navigation above
+        to browse all our delicious recipes.
+      </p>
+
+      <h3>Featured Recipes</h3>
+      <div class="recipe-container">
         <div class="recipe-card">
-            <img src="https://via.placeholder.com/400x200.png?text=Yummy+Food" alt="Placeholder image of food">
-            <h3>Classic Chocolate Cake</h3>
-            <p>A timeless, rich, and moist chocolate cake for all occasions.</p>
-            <a href="recipe_detail.html">View Recipe</a>
+          <img src="/static/images/pancakes.jpg" alt="Picture of pancakes" />
+          <h3>Pancakes</h3>
+          <a href="recipe_detail.html">View Recipe</a>
         </div>
+        <div class="recipe-card">
+          <img
+            src="/static/images/lemonade.jpg"
+            alt="Picture of lemonade"
+          />
+          <h3>Lemonade</h3>
+          <a href="recipe_detail.html">View Recipe</a>
+        </div>
+        <div class="recipe-card">
+          <img src="/static/images/pasta.jpg" alt="Picture of pasta" />
+          <h3>Pasta</h3>
+          <a href="recipe_detail.html">View Recipe</a>
+        </div>
+      </div>
     </main>
 
     <footer id="page-footer">
-        <p>&copy; a footer</p>
+      <p>&copy; a footer</p>
     </footer>
-
-</body>
+  </body>
 </html>

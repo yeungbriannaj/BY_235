@@ -89,24 +89,28 @@ nav ul li a:hover {
 }
 
 /* Class Selector: .recipe-card (for browse.html) */
-.recipe-card {
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  margin-bottom: 20px;
-  padding: 15px;
-  background: var(--white);
-  transition: box-shadow 0.3s ease-in-out;
-}
-
 .recipe-card:hover {
     box-shadow: 0 4px 15px rgba(0,0,0,0.15);
 }
 
-.recipe-card img {
-    max-width: 100%;
-    border-radius: 5px;
+.recipe-container {
+    display: flex;
+    gap: 20px; 
+    flex-wrap: wrap; 
 }
 
+.recipe-card {
+    flex: 1 1 250px;  
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+}
+
+.recipe-card img {
+    max-width: 100%;
+    border-radius: 10px;
+}
 
 /* Class Selector: .recipe-detail-image (for recipe_detail.html) */
 .recipe-detail-image {
