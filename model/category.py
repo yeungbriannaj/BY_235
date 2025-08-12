@@ -25,13 +25,9 @@ class Category:
         return len(self.__recipes)
 
     def add_recipe(self, recipe: "Recipe"):
-        if recipe in self.__recipes:
-            raise CategorisationError(f"Recipe '{recipe.name}' is already in category '{self.name}'.")
         self.__recipes.append(recipe)
 
     def remove_recipe(self, recipe: "Recipe"):
-        if recipe not in self.__recipes:
-            raise CategorisationError(f"Recipe '{recipe.name}' is not in category '{self.name}'.")
         self.__recipes.remove(recipe)
 
     def __eq__(self, other):

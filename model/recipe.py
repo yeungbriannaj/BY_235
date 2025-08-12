@@ -3,7 +3,6 @@ from datetime import date
 from .category import Category
 from errors.CategorisationError import CategorisationError
 
-
 class Recipe:
     def __init__(self,
                  recipe_id: int,
@@ -71,10 +70,7 @@ class Recipe:
 
     def add_to_category(self, new_category: 'Category'):
         if new_category in self._categories:
-            raise CategorisationError(f"Recipe is already in category '{new_category.name}'.")
-        
-        # The MAX_CATEGORIES check has been removed as requested.
-        
+            raise CategorisationError(f"Recipe is already in category '{new_category.name}'.")        
         new_category.add_recipe(self)
         self._categories.append(new_category)
 

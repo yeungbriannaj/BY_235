@@ -4,8 +4,8 @@ from model.category import Category
 from errors.CategorisationError import CategorisationError
 
 if __name__ == "__main__":
-    cat_dessert = Category(1, "Desserts")
-    cat_vegan = Category(2, "Vegan")
+    drinks = Category(1, "Drinks")
+    desserts = Category(2, "Desserts")
 
     recipe1 = Recipe(
         recipe_id=101,
@@ -19,7 +19,7 @@ if __name__ == "__main__":
         preparation_time=20,
         cook_time=30,
         instructions="Mix ingredients and bake at 350F for 30 minutes.",
-        categories=[cat_dessert],
+        categories=[],
         recipe_yield="1 cake",
         servings=8,
         description="A rich chocolate cake perfect for celebrations.",
@@ -28,31 +28,28 @@ if __name__ == "__main__":
 
     recipe2 = Recipe(
         recipe_id=102,
-        name="Vegan Salad",
-        images=["vegan_salad.jpg"],
-        ingredients=["Lettuce", "Tomatoes", "Cucumber", "Olive Oil"],
-        ingredient_quantities={"Lettuce": "1 head", "Tomatoes": "2", "Cucumber": "1", "Olive Oil": "2 tbsp"},
-        author="Bob",
+        name="Lemonade",
+        images=["lemonade.jpg"],
+        ingredients=["Lemon", "Sugar", "Water"],
+        ingredient_quantities={"Lemon": "1", "Sugar": "50g", "Water": "1 cup"},
+        author="Monkey D. Luffy",
         date_added=date(2025, 8, 3),
         rating=4.0,
         preparation_time=10,
         cook_time=0,
-        instructions="Chop all ingredients and toss with olive oil.",
-        categories=[cat_vegan],
+        instructions="Squeeze lemonade into a cup, add sugar and water and stir.",
+        categories=[],
         recipe_yield="1 bowl",
         servings=2,
-        description="Fresh and healthy vegan salad.",
+        description="Fresh Lemonade.",
         reviews=["Very refreshing!", "Easy to make."]
     )
 
     print(recipe1)
     print(recipe2)
 
-    cat_dessert.add_recipe(recipe1)
-    cat_vegan.add_recipe(recipe2)
-
-    print(cat_dessert)
-    print("Recipes in Dessert category:", cat_dessert.recipes)
-
-    print(cat_vegan)
-    print("Recipes in Vegan category:", cat_vegan.recipes)
+    recipe1.add_to_category(desserts)
+    recipe2.add_to_category(drinks)
+    print(f"Category {desserts}")
+    print(f"Category {drinks}")
+  
