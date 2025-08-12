@@ -1,0 +1,2 @@
+class CategorisationError(Exception):
+    pass
