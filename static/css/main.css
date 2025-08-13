@@ -6,7 +6,6 @@
   --base-font: 'Helvetica Neue', Arial, sans-serif;
 }
 
-/* Element Selector: body */
 body {
   font-family: var(--base-font);
   margin: 0;
@@ -15,22 +14,9 @@ body {
   line-height: 1.6;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
   font-family: 'Georgia', serif;
   color: var(--primary-color);
-}
-
-h1 {
-  font-size: 2.5em;
-}
-
-h2 {
-  font-size: 2em;
-}
-
-p {
-  font-size: 1em;
-  margin-bottom: 1em;
 }
 
 a {
@@ -48,11 +34,9 @@ a:hover {
   margin: 20px auto;
   padding: 20px;
   background-color: var(--white);
-  border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-/* ID Selector: #main-header */
 #main-header {
   background-color: var(--primary-color);
   color: var(--white);
@@ -65,7 +49,6 @@ a:hover {
   margin: 0;
 }
 
-/* Element Selector: nav (navigation) */
 nav ul {
   list-style-type: none;
   padding: 0;
@@ -112,7 +95,33 @@ nav ul li a:hover {
     border-radius: 10px;
 }
 
-/* Class Selector: .recipe-detail-image (for recipe_detail.html) */
+
+.home-card {
+  flex: 1 1 150px;  
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 2.5px;
+  text-align: center;
+  display: flex;
+}
+.home-card img {
+  max-width: 100%;
+  object-fit: cover;
+  height: 250px; 
+  border-radius: 5px;
+  display: block;
+}
+
+.left {
+  flex: 2;   
+}
+
+.right {
+  flex: 1; 
+  background: white;
+}
+
+
 .recipe-detail-image {
     max-width: 50%;
     display: block;
@@ -120,11 +129,29 @@ nav ul li a:hover {
     border-radius: 8px;
 }
 
-/* ID Selector: #page-footer */
 #page-footer {
   text-align: center;
   margin-top: 40px;
   padding: 20px;
   font-size: 0.9em;
   color: #777;
+}
+
+
+.recipe-information {
+  display: flex;
+  flex-direction: column;; 
+}
+
+.more-recipe {
+  flex: 1 1 250px;  
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+}
+
+.rmore-recipe img {
+  max-width: 100%;
+  border-radius: 10px;
 }
