@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="home-card">
+  <div class="left"><img src="{{ url_for('static', filename='images/homeImage.png') }}" alt="Landing Page Image" /></div>
+  <div class="right"><br><br>
+    <h2>Get started today!</h2>
+    <h4>Fresh new daily recipes</h4>
+    <button> Subscribe for Recipes </button>
+  </div>
+</div>
+
+<h2>Featured Recipes</h2>
+<div class="recipe-container">
+  <div class="recipe-card">
+    <img src="{{ url_for('static', filename='images/pancakes.jpg') }}" alt="Picture of pancakes" />
+    <h3>Pancakes</h3>
+    <a href="{{ url_for('recipe_detail') }}">View Recipe</a>
+  </div>
+  <div class="recipe-card">
+    <img src="{{ url_for('static', filename='images/lemonade.jpg') }}" alt="Picture of lemonade" />
+    <h3>Lemonade</h3>
+    <a href="{{ url_for('recipe_detail') }}">View Recipe</a>
+  </div>
+  <div class="recipe-card">
+    <img src="{{ url_for('static', filename='images/pasta.jpg') }}" alt="Picture of pasta" />
+    <h3>Pasta</h3>
+    <a href="{{ url_for('recipe_detail') }}">View Recipe</a>
+  </div>
+</div>
+{% endblock %}

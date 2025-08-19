@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Fluffy Pancakes: Made in 15 minutes</h2>
+<div class="pancake-container">
+  <div class="recipe-card">
+    <img src="{{ url_for('static', filename='images/pancakes.jpg') }}" alt="Picture of pancakes" />
+  </div>
+  <div class="recipe-information"><br>
+      <h2> Ingredients</h2>
+      <li> 2 cups / 300g plain / all purpose flour </li>
+      <li> 4 tsp baking powder</li>
+      <li> 1/4 cup / 55g white sugar</li>
+      <li> Pinch of salt </li>
+      <li> 1 egg </li>
+      <li> 1 3/4 cups / 435 ml cups milk </li>
+      <li> 1 tsp vanilla extract or essence</li>
+      <li> 4 tsp butter </li>
+    </div>
+    <div class="recipe-information"><br>
+      <h2> Instructions </h2>
+      <li> Place flour, baking powder, sugar and salt in a bowl, whisk to combine.</li>
+      <li> Add egg, milk and vanilla. Whisk until lump free, no longer than 30 seconds.</li>
+      <li> Use medium heat. Add 1/2 tsp butter and swirl to melt.</li>
+      <li> Pour 1/4 cup batter into the middle of the fry pan. </li>
+      <li> Swirl pan lightly to spread or use the ice cream scoop edge to spread into 11cm / 4.5″ circle </li>
+      <li> When bubbles rise to the surface, flip and cook the other side until golden. </li>
+    </div><br><br>
+    <h2> Similar Recipes </h2>
+  </div>
+
+  <div class="recipe-container">
+      <div class="recipe-card">
+        <img src="{{ url_for('static', filename='images/pancake2.jpg') }}" alt="Picture of crepes" />
+        <h3>Crepe Pancakes</h3>
+        <a href="{{ url_for('recipe_detail') }}">View Recipe</a>
+      </div>
+      <div class="recipe-card">
+        <img src="{{ url_for('static', filename='images/pancake3.jpg') }}" alt="Picture of different pancakes" />
+        <h3>Homemade Lemonade</h3>
+        <a href="{{ url_for('recipe_detail') }}">View Recipe</a>
+      </div>
+      <div class="recipe-card">
+        <img src="{{ url_for('static', filename='images/pancakes.jpg') }}" alt="Picture of more pancakes" />
+        <h3>Quick Pancakes</h3>
+        <a href="{{ url_for('recipe_detail') }}">View Recipe</a>
+      </div>
+    </div>
+{% endblock %}
