@@ -3,50 +3,14 @@
 {% block content %}
 <h2>Browse All Recipes</h2>
 <div class="recipe-container">
+  
+  {% for recipe in recipes %}
   <div class="recipe-card">
-    <img src="{{ url_for('static', filename='images/pancakes.jpg') }}" alt="Picture of pancakes" />
-    <h3>Pancakes</h3>
-    <a href="{{ url_for('recipe_detail') }}">View Recipe</a>
+    <img src="{{ url_for('static', filename=recipe.image) }}" alt="Picture of {{ recipe.title }}" />
+    <h3>{{ recipe.title }}</h3>
+    <a href="{{ url_for('recipe_detail', recipe_id=recipe.id) }}">View Recipe</a>
   </div>
-  <div class="recipe-card">
-    <img src="{{ url_for('static', filename='images/lemonade.jpg') }}" alt="Picture of lemonade" />
-    <h3>Lemonade</h3>
-    <a href="{{ url_for('recipe_detail') }}">View Recipe</a>
-  </div>
-  <div class="recipe-card">
-    <img src="{{ url_for('static', filename='images/pasta.jpg') }}" alt="Picture of pasta" />
-    <h3>Pasta</h3>
-    <a href="{{ url_for('recipe_detail') }}">View Recipe</a>
-  </div>
-  <div class="recipe-card">
-    <img src="{{ url_for('static', filename='images/burger.jpg') }}" alt="Picture of burger" />
-    <h3>Burger</h3>
-    <a href="{{ url_for('recipe_detail') }}">View Recipe</a>
-  </div>
-  <div class="recipe-card">
-    <img src="{{ url_for('static', filename='images/salad.jpg') }}" alt="Picture of salad" />
-    <h3>Salad</h3>
-    <a href="{{ url_for('recipe_detail') }}">View Recipe</a>
-  </div>
-  <div class="recipe-card">
-    <img src="{{ url_for('static', filename='images/butterchicken.jpg') }}" alt="Picture of butter chicken" />
-    <h3>Butter Chicken</h3>
-    <a href="{{ url_for('recipe_detail') }}">View Recipe</a>
-  </div>
-  <div class="recipe-card">
-    <img src="{{ url_for('static', filename='images/pho.jpg') }}" alt="Picture of pho" />
-    <h3>Pho</h3>
-    <a href="{{ url_for('recipe_detail') }}">View Recipe</a>
-  </div>
-  <div class="recipe-card">
-    <img src="{{ url_for('static', filename='images/beefnoodle.jpg') }}" alt="Picture of beef noodles" />
-    <h3>Beef Noodles</h3>
-    <a href="{{ url_for('recipe_detail') }}">View Recipe</a>
-  </div>
-  <div class="recipe-card">
-    <img src="{{ url_for('static', filename='images/friedrice.jpg') }}" alt="Picture of fried rice" />
-    <h3>Fried Rice</h3>
-    <a href="{{ url_for('recipe_detail') }}">View Recipe</a>
-  </div>
+  {% endfor %}
+
 </div>
 {% endblock %}
